@@ -1,7 +1,4 @@
-/**
- * @author Jeet Mulani
- * @description Server and REST API config
- */
+
 import express from 'express';
 import cors from 'cors'
 import http from 'http';
