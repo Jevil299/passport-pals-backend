@@ -21,7 +21,7 @@ router.get('/get/tour', userController?.get_tour)
 router.get('/get/tour/:id', userController?.get_tour_by_id)
 
 // --------- booking Modal ----------
-router.post('/add/booking', userJWT, userController?.add_booking)
+router.post('/add/booking', userJWT,validation?.add_booking, userController?.add_booking)
 
 // --------- contactUs Modal  -----------
 router.post('/add/contactUs', userJWT, validation?.add_contactUs, userController?.add_contactUs)

@@ -10,13 +10,16 @@ export const add_booking = async (req: Request, res: Response) => {
     reqInfo(req)
     try {
         let user: any = req.header('user');
-        let body = req.body,
-        booking_data: any = body.booking_data,
-        response: any = []
+        console.log("üser",user);
+        
+        let body = req.body
+        // booking_data: any = body.booking_data
+        // response: any = []
         body.createdBy = user._id
-        for (let i = 0; i < booking_data.length; i++) {
-            response = response.push(new bookingModel(booking_data[i]).save())
-        }
+        let response :any =  new bookingModel(body).save()
+        // for (let i = 0; i < booking_data.length; i++) {
+        //     response = response.push(new bookingModel(booking_data[i]).save())
+        // }
         if (response) return res.status(200).json(await apiResponse(200, responseMessage.addDataSuccess('booking'), response, {}));
         else return res.status(401).json(await apiResponse(401, responseMessage.addDataError, {}, {}));
     } catch (error) {
