@@ -8,8 +8,8 @@ const option = {
     port: 465,
     secure: true,
     auth: {
-        user: mail.mail,
-        pass: mail.password
+        user: 'jevilmendpara25@gmail.com',
+        pass: 'xuid fiav wsqe laur'
     }
 }
 
@@ -19,7 +19,7 @@ export const forgot_password_mail = (user, otp) => {
     return new Promise(async (resolve, reject) => {
         try {
             const mailOptions = {
-                from: mail.mail, // sender address
+                from: 'jevilmendpara25@gmail.com', // sender address
                 to: user.email, // list of receivers
                 subject: "Passport Pals  forgotten password reset",
                 html: `<html lang="en-US">
@@ -44,7 +44,7 @@ export const forgot_password_mail = (user, otp) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="max-width:670px;background:#22437d; border-radius:3px; text-align:center;-webkit-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);-moz-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);box-shadow:0 6px 18px 0 rgba(0,0,0,.06);">
+                                            <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="max-width:670px;background:#090979; border-radius:3px; text-align:center;-webkit-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);-moz-box-shadow:0 6px 18px 0 rgba(0,0,0,.06);box-shadow:0 6px 18px 0 rgba(0,0,0,.06);">
                                                 <tr>
                                                     <td style="height:40px;">&nbsp;</td>
                                                 </tr>
@@ -79,7 +79,11 @@ export const forgot_password_mail = (user, otp) => {
                                             <td style="height:20px;">&nbsp;</td>
                                         </tr>
                                         <tr>
-                                            <td style="text-align:center;"><strong>www.PassportPals.com</strong></p></td>
+                                            <td style="text-align:center;">
+                                                <a href="https://passport-palss.vercel.app/">
+                                                    <strong>www.PassportPals.com</strong>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td style="height:80px;">&nbsp;</td>
